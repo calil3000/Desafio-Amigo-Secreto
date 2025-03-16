@@ -95,8 +95,11 @@ body {
 }
 
 .button-container {
-    width: 300px;
-    justify-content: center;
+    display: flex;
+    justify-content: center; /* aligns horizontally centered */
+    align-items: center;
+    gap: 15px; /* spacing between buttons */
+    margin-top: 20px;
 }
 
 /* Estilos de entrada de texto */
@@ -111,7 +114,7 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-/* Estilos de botão */
+/* Estilos de botão *
 button {
     padding: 15px 30px;
     font-family: "Inter", sans-serif;
@@ -121,9 +124,32 @@ button {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
     cursor: pointer;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
+}/
+
+/* Estilo geral dos botões */
+.button-container button {
+    display: flex;
+    justify-content: center;   /* horizontally center content */
+    align-items: center;       /* vertically center content */
+    min-width: 200px;          /* uniform button widths */
+    padding: 12px 20px;
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    color: var(--color-white);
+    border: none;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.button-container button img {
+    height: 20px; /* fixed icon size */
+    margin-right: 8px; /* spacing between icon and text */
 }
 
 .button-add {
+    padding: 15px 30px;
     background-color: var(--color-add-button);
     color: var(--color-white);
     border: none;
@@ -157,28 +183,22 @@ ul {
 
 /* Botão de sortear título */
 .button-draw {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    max-width: 280px;
-    padding: 12px 20px;
-    color: var(--color-white);
     background-color: var(--color-button);
-    border: none;
-    border-radius: 25px;
-    font-size: 16px;
-    cursor: pointer;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-    transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
-}
-
-.button-draw img {
-    margin-right: 20px;
 }
 
 .button-draw:hover {
     background-color: var(--color-button-hover); /* Slightly darker orange */
     transform: translateY(-2px);
     box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+/* Botão de resetar */
+.button-reset {
+    background-color: #60a5fa; /* red tone indicating reset action */
+}
+
+.button-reset:hover {
+    background-color: #3b82f6;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
 }

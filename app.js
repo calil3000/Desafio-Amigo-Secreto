@@ -40,7 +40,7 @@ function sortearAmigo() {
         return;
     }
         else if (amigosArray.length < 1) {
-            alert('Todos os amigos inseridos já foram sorteados.');
+            alert('Todos os amigos inseridos já foram sorteados. Clique em "Resetar sorteio" para recomeçar.');
             return;
         }
 
@@ -57,4 +57,18 @@ function sortearAmigo() {
     //Atribui o nome da pessoa sorteada para o id no html "amigoSorteado" e mostra na tela usando innerHTML
     let amigoSorteadoElement = document.getElementById('amigoSorteado');
     amigoSorteadoElement.innerHTML = amigoSorteado;
+}
+
+//Função para resetar o sorteio:
+function resetarSorteio() {
+    // Limpa o array e o número de sorteios
+    amigosArray = [];
+    sorteios = 0;
+
+    //Limpa a lista de amigos e o amigo sorteado na tela
+    document.getElementById('listaAmigos').innerHTML = "";
+    document.getElementById('amigoSorteado').innerHTML = "";
+
+    //Define o foco nocamente no campo de inserir nome
+    document.getElementById('amigo').focus();
 }
