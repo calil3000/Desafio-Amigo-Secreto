@@ -58,4 +58,7 @@ AmigoSecreto/
 Lucas Calil - https://github.com/calil3000
 
 
+**Link para o app**
+https://calil3000.github.io/Desafio-Amigo-Secreto/
+
 **Sinta-se à vontade para contribuir com melhorias para este projeto!**
